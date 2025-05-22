@@ -1,9 +1,10 @@
-import Hero from "./sections/Hero";
+import Yusra from "./sections/Yusra";
+import './styles/index.css';
 
 const App = () => {
   return (
   <>
-  <Hero />
+  <Yusra />
 
   </>
   )

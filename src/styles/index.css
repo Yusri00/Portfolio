@@ -1,5 +1,8 @@
-@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
@@ -81,11 +84,11 @@ section {
     @apply grid grid-cols-1 xl:grid-cols-12 gap-10;
   }
 
-  .hero-layout {
+  .yusra-layout {
     @apply relative z-10 xl:mt-20 mt-32 md:h-dvh h-[80vh] flex xl:items-center items-start justify-center;
   }
 
-  .hero-text {
+  .yusra-text {
     @apply flex flex-col justify-center md:text-[60px] text-[30px] font-semibold relative z-10 pointer-events-none;
     img {
       @apply size-8 md:size-10 object-contain;
@@ -95,11 +98,11 @@ section {
     }
   }
 
-  .hero-badge {
+  .yusra-badge {
     @apply bg-black-200 py-2 px-4 rounded-full w-fit text-sm md:text-base text-nowrap;
   }
 
-  .hero-3d-layout {
+  .yusra-3d-layout {
     @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0;
   }
 
@@ -323,7 +326,7 @@ section {
   }
 }
 
-/* Hero text slider starts */
+/* yusra text slider starts */
 .slide {
   display: inline-block;
   flex-direction: column;
@@ -363,7 +366,7 @@ section {
   }
 }
 
-/* Hero Text slider ends */
+/* yusra Text slider ends */
 
 .gradient-line {
   width: 2px;
