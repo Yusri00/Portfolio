@@ -65,13 +65,18 @@ body {
 }
 
 .intro-text {
-  display: flex;
+  display: block;
   justify-content: center;  /*Flyttar till mitten*/
-  font-size: 40px;
+  font-size: 50px;
   align-items: center;
   margin: 0 auto;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.name{
+  color: #5856D6;
 }
 
 .hello {
@@ -81,10 +86,28 @@ body {
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 50px;
   border: 2px dotted black;
   border-radius: 20px;
   padding: 5px 20px;
   width: fit-content;/* Låter höjden anpassas naturligt */
   height: auto; /* Låter höjden anpassas naturligt */
+}
+
+.memoji-container {
+ 
+  border-radius: 50%; /*Cirkel skapas % */
+  display:inline-block;
+  background-color: black;
+  justify-content: center;
+  margin-top: 40px;
+  padding: 10px; 
+  overflow: hidden; /* Hindrar bilden från att sticka ut */
+  width: fit-content; /* Anpassar containern efter innehållet */
+}
+.memoji img {
+  height: 600px;
+  width: 480px;
+  display: block;
+    object-fit: contain; /* Behåller bildens proportioner */
 }
