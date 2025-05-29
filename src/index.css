@@ -1,3 +1,90 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+body {
+  height:100vh; 
+  font-family: 'SF Pro Display', sans-serif;
+}
+.navbar-container {
+  width: 80%;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: -20px 10px;
+  border-radius: 60px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto; /*Centrerar navbar*/
+}
+
+.nav-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+  list-style: none;
+  font-size: 18px
+}
+
+.sticky{
+  position: fixed;
+  top: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+}
+
+.logo-img {
+  height: 150px;
+  margin-top: -30px;
+  margin-bottom: -40px;  
+  width: auto;
+  object-fit: contain;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.front-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 8vh; /* Ger lite utrymme från navbaren */
+  padding: 0 20px; /* Ger lite padding på sidorna */
+}
+
+.intro-text {
+  display: flex;
+  justify-content: center;  /*Flyttar till mitten*/
+  font-size: 40px;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.hello {
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  margin-top: 40px;
+  border: 2px dotted black;
+  border-radius: 20px;
+  padding: 5px 20px;
+  width: fit-content;/* Låter höjden anpassas naturligt */
+  height: auto; /* Låter höjden anpassas naturligt */
+}
