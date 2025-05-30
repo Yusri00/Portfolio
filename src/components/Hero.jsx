@@ -12,7 +12,7 @@ const Hero = () => {
         UX Designer
       </h1>
       <div className='memoji-container'>
-      <img className='memoji' src={Memoji} alt='Memoji ikon'>
+      <img className='memoji-img' src={Memoji} alt='Ikon'>
       </img>
     </div>
   </div>

@@ -64,17 +64,6 @@ body {
   padding: 0 20px; /* Ger lite padding på sidorna */
 }
 
-.intro-text {
-  display: block;
-  justify-content: center;  /*Flyttar till mitten*/
-  font-size: 50px;
-  align-items: center;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 20px;
-  font-weight: bold;
-}
-
 .name{
   color: #5856D6;
 }
@@ -94,20 +83,70 @@ body {
   height: auto; /* Låter höjden anpassas naturligt */
 }
 
+.intro-text {
+  display: block;
+  justify-content: center;  /*Flyttar till mitten*/
+  font-size: 50px;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
 .memoji-container {
- 
   border-radius: 50%; /*Cirkel skapas % */
   display:inline-block;
-  background-color: black;
+  background-color: white;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 30px;
   padding: 10px; 
   overflow: hidden; /* Hindrar bilden från att sticka ut */
-  width: fit-content; /* Anpassar containern efter innehållet */
+  width: 400px; 
+  height: 400px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
-.memoji img {
-  height: 600px;
-  width: 480px;
+.memoji-img {
+  height:110%;
+  width: 110%;
+  object-fit: cover; 
   display: block;
-    object-fit: contain; /* Behåller bildens proportioner */
+  margin: -10% 0 0 -2%;
 }
+
+@media (min-width: 740px) and (max-width: 1080px) {
+
+.navbar-container {
+  width: 90%;
+  padding: -10px;
+}
+
+.nav-list{
+  gap: 40px;
+  font-size: 17px;
+}
+
+.sticky{
+  width: 90%;
+}
+
+.logo-img {
+  height: 130px;
+}
+
+.intro-text {
+  font-size: 45px;
+}
+
+.memoji-container {
+  width: 200px; 
+  height: 200px;
+}
+
+.memoji-img {
+  height:120%;
+  width: 120%;
+  margin: -15% 0 0 -2%;
+}
+
+} 
