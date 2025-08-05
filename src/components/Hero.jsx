@@ -11,6 +11,14 @@ const Hero = () => {
         <br />
         UX Designer
       </h1>
+      <div className='bubble-container'></div>
+      <div className='bubble1'></div>
+      <div className='bubble2'></div>
+      <div className='bubble3'></div>
+      <div className='bubble4'></div>
+      <div className='bubble5'></div>
+      <div className='bubble6'></div>
+      
       <div className='memoji-container'>
       <img className='memoji-img' src={Memoji} alt='Ikon'>
       </img>

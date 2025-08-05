@@ -1,7 +1,8 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
 *{
   margin:0;
@@ -9,20 +10,28 @@
   box-sizing:border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height:100vh; 
   font-family: 'SF Pro Display', sans-serif;
+  background-color: black;
 }
+
 .navbar-container {
   width: 80%;
   align-items: center;
-  background-color: black;
-  color: white;
-  padding: -20px 10px;
-  border-radius: 60px;
-  margin-top: 30px;
+  background-color: white;
+  color: black;
+  padding: 0 10px; /* fixat från -20px */
+  border-radius: 50px;
+  margin-top: 20px;
   margin-left: auto;
-  margin-right: auto; /*Centrerar navbar*/
+  margin-right: auto;
+  position: relative;
+  z-index: 10;
 }
 
 .nav-list{
@@ -31,12 +40,13 @@ body {
   justify-content: center;
   gap: 120px;
   list-style: none;
-  font-size: 18px
+  font-size: 18px;
+  
 }
 
 .sticky{
   position: fixed;
-  top: 10;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
   width: 80%;
@@ -76,7 +86,8 @@ body {
   margin-right: auto;
   justify-content: center;
   margin-top: 50px;
-  border: 2px dotted black;
+  border: 2px dotted white;
+  color: white;
   border-radius: 20px;
   padding: 5px 20px;
   width: fit-content;/* Låter höjden anpassas naturligt */
@@ -92,33 +103,128 @@ body {
   text-align: center;
   margin-top: 20px;
   font-weight: bold;
+  color: white;
+}
+
+.bubble-container {
+  position: absolute;
+  margin-top: 380px;
+  right: 10;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: transparent;
+  z-index: -1; /* lägg bakom memoji */
+  box-shadow: 
+    0 0 40px 20px rgba(148, 42, 242, 0.6),
+    0 0 80px 40px rgba(42, 148, 242, 0.4),
+    0 0 120px 60px rgba(242, 148, 42, 0.3);
+}
+
+.bubble1{
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 25px rgba(148, 42, 242, 0.769), 0 0 15px rgba(242, 42, 148, 0.4);
+  z-index: 1;
+  animation: float 10s ease-in infinite;
+}
+
+.bubble2 {
+  position: absolute;
+  top: 30px;
+  right: 60px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 30px rgba(68, 141, 205, 0.948), 0 0 30px rgba(238, 235, 233, 0.3);
+  animation: float 18s ease-in infinite;
+}
+
+.bubble3 {
+  position: absolute;
+  bottom:300px;
+  right: 90px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 30px rgba(183, 112, 218, 0.948), 0 0 60px rgba(226, 205, 237, 0.3);
+  animation: float 9s ease-in infinite;
+}
+
+.bubble4 {
+  position: absolute;
+  top: 400px;
+  left: 140px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 30px rgba(11, 134, 201, 0.948), 0 0 60px rgba(226, 205, 237, 0.3);
+  animation: float 8s ease-out infinite;
+}
+
+.bubble5 {
+  position: absolute;
+  bottom: 10px;
+  left: 350px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 30px rgba(142, 46, 190, 0.948), 0 0 60px rgba(226, 205, 237, 0.3);
+  animation: float 3s ease-in infinite;
+}
+
+.bubble6 {
+  position: absolute;
+  bottom: 10px;
+  right: 400px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 30px rgba(142, 46, 190, 0.948), 0 0 60px rgba(226, 205, 237, 0.3);
+  animation: float 11s ease-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(30px, -20px);
+  }
 }
 
 .memoji-container {
-  border-radius: 50%; /*Cirkel skapas % */
+  position: relative; /* gör att skugga/bilder kan positioneras korrekt */
+  border-radius: 50%;
   display:inline-block;
   background-color: white;
   justify-content: center;
-  margin-top: 30px;
-  padding: 10px; 
-  overflow: hidden; /* Hindrar bilden från att sticka ut */
-  width: 400px; 
-  height: 400px;
+  margin-top: 50px;
+  padding: 10px;
+  overflow: hidden;
+  width: 240px; 
+  height: 240px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
+
 .memoji-img {
   height:110%;
   width: 110%;
   object-fit: cover; 
   display: block;
-  margin: -10% 0 0 -2%;
+  margin-top: -20px;
 }
 
 @media (min-width: 740px) and (max-width: 1080px) {
 
 .navbar-container {
   width: 90%;
-  padding: -10px;
+  padding: 0 10px;
+  margin-top: -20px; 
 }
 
 .nav-list{
@@ -136,6 +242,7 @@ body {
 
 .intro-text {
   font-size: 45px;
+  color: white;
 }
 
 .memoji-container {
@@ -149,4 +256,24 @@ body {
   margin: -15% 0 0 -2%;
 }
 
+/*Projects*/
+.project-box{
+  display: flex;
+  padding: 20px; 
+  height: 100px;
+  width: 50px;
+  background-color: green;
+  border-radius: 60px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  align-items: center; 
+}
+
+#project-cards{
+  height: 200px;
+  width: 100px;
+  padding: 20px;
+  border-radius: 30%;
+  background-color: green;
+
+}
 } 

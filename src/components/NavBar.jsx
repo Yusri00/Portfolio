@@ -25,7 +25,7 @@ const NavBar = () => {
       <nav className={`navbar-container ${isSticky ? 'sticky' : ''}`}>
         <ul className='nav-list'>
           <li><a href='#'>Home</a></li>
-          <li><a href='#'>Projects</a></li>
+          <li><a href='#projects'>Projects</a></li>
           <li className='logo-container'>
             <img className='logo-img' src={Logo} alt='Logo' />
           </li>
