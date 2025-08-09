@@ -1,4 +1,4 @@
-import Memoji from '../assets/memoji-smile.png';
+import Memoji from '../assets/images/memoji-smile.png';
 
 const Hero = () => {
   

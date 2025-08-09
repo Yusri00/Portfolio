@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import Logo from '../assets/Logga-utanbg.png';
+import Logo from '../assets/images/Logga-utanbg.png';
 
 const NavBar = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -24,13 +24,13 @@ const NavBar = () => {
     <div className='frontpage-container'>
       <nav className={`navbar-container ${isSticky ? 'sticky' : ''}`}>
         <ul className='nav-list'>
-          <li><a href='#'>Home</a></li>
+          <li><a href='#home'>Home</a></li>
           <li><a href='#projects'>Projects</a></li>
           <li className='logo-container'>
             <img className='logo-img' src={Logo} alt='Logo' />
           </li>
-          <li><a href='#'>CV</a></li>
-          <li><a href='#'>Contact</a></li>
+          <li><a href='#cv'>CV</a></li>
+          <li><a href='#contact'>Contact</a></li>
         </ul>
       </nav>
     </div>

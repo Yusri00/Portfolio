@@ -1,0 +1,52 @@
+.projects-title{
+  font-size: 20px;
+}
+
+.project-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #111; /* mörkare än body, t.ex */
+  border-radius: 10px;
+}
+
+.project-box {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 0 10px #7f00ff;
+  transition: transform 0.3s ease;
+}
+
+.project-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #a855f7;
+}
+
+#project-cards{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolumner */
+  gap: 20px;
+}
+
+.tech-icon{
+  width: 24px;
+  height: 24px; 
+  object-fit: contain; /* så att bilden inte blir utdragen */
+  margin-right: 5px;
+  
+}
+.tech-icons {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.tech-icons img {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;   /* behåller proportioner */
+}
