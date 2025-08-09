@@ -6,9 +6,14 @@ const Hero = () => {
    <div className='front-page'>
       <h1 className='hello'>Hello!</h1>
       <h1 className='intro-text'>
-        I'm <span className='name'>Yusra,</span> <br />
-        Frontend Developer &
-        <br />
+        I'm <span className='name'>
+          <span>Y</span> 
+          <span>u</span>  
+          <span>s</span>  
+          <span>r</span> 
+          <span>a</span>
+          </span>, <br />
+        Frontend Developer &<br />
         UX Designer
       </h1>
       <div className='bubble-container'></div>
