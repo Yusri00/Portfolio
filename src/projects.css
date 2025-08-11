@@ -32,21 +32,40 @@
   gap: 20px;
 }
 
-.tech-icon{
-  width: 24px;
-  height: 24px; 
-  object-fit: contain; /* så att bilden inte blir utdragen */
-  margin-right: 5px;
-  
+.project-icons-container{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 8px;
 }
+
+/* TECH-IKONER - gruppen till vänster */
 .tech-icons {
   display: flex;
   gap: 9px;
-  flex-wrap: wrap;
+  align-items: center;
 }
 
-.tech-icons img {
-  width: 27px;
-  height: 27px;
-  object-fit: contain;   /* behåller proportioner */
+.tech-icon{
+  width: 24px;
+  height: 24px;
+  object-fit: contain; /* så att bilden inte blir utdragen */  
+}
+
+/* Enhetlig storlek för alla små tech-ikoner */
+.tech-icons img,
+.tech-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  display: block;
+}
+
+.team-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-left: auto;  
+  flex-shrink: 0;     
+  margin-right: 8px;  /* Lite luft från kanten */
 }
