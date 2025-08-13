@@ -1,5 +1,8 @@
 .projects-title{
-  font-size: 20px;
+  font-size: 45px;
+  color: white;
+  text-align: center;
+  margin-top: 250px;
 }
 
 .project-container {
@@ -9,6 +12,7 @@
   padding: 20px;
   background-color: #111; /* mörkare än body, t.ex */
   border-radius: 10px;
+  margin-top: 100px;
 }
 
 .project-box {
@@ -16,9 +20,10 @@
   color: white;
   padding: 20px;
   border-radius: 10px;
-  width: 300px;
+  width: 400px;
   box-shadow: 0 0 10px #7f00ff;
   transition: transform 0.3s ease;
+  font-size: 16px; 
 }
 
 .project-box:hover {
@@ -29,7 +34,7 @@
 #project-cards{
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 kolumner */
-  gap: 20px;
+  gap: 50px;
 }
 
 .project-icons-container{
@@ -68,4 +73,61 @@
   margin-left: auto;  
   flex-shrink: 0;     
   margin-right: 8px;  /* Lite luft från kanten */
+}
+
+/* --- Halvskärm på MacBook 14 tum (~756px) --- */
+@media (max-width: 800px) {
+  #project-cards {
+    gap: 40px;
+  }
+
+  .project-box {
+    width: 100%;
+    max-width: 280px; /* Begränsa maxbredden för mindre boxar */
+    padding: 15px; 
+    font-size: 15px; 
+  }
+
+  .projects-title {
+    font-size: 45px;
+    color: white;
+    text-align: center;
+    margin-top: 250px;
+  }
+
+  .project-container {
+    padding: 15px;
+    margin-top: 100px;
+  }
+  
+ /* Gör ikonerna lite mindre */
+  .tech-icons img,
+  .tech-icon,
+  .team-icons {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* --- Mobiler (väldigt smalt) --- */
+@media (max-width: 500px) {
+  .project-box {
+    padding: 15px; /* Mindre padding för små skärmar */
+    font-size: 14px;
+  }
+
+  .tech-icons img,
+  .tech-icon,
+  .team-icon {
+    width: 20px; /* Mindre ikoner */
+    height: 20px;
+  }
+
+  .projects-title {
+    font-size: 16px;
+  }
+
+  #project-cards {
+    gap: 12px; /* Mindre mellanrum */
+  }
 }
